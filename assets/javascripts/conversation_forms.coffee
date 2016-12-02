@@ -2,7 +2,6 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-
 $ ->
   window.wrapUp = ->
     console.log('done')
@@ -72,5 +71,5 @@ $ ->
 
     openDialog(inputIds)
 
-  if document.getElementById('convo-form') != null ->
+  if document.getElementById('convo-form') != null
     converse()
