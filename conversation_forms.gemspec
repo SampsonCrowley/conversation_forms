@@ -6,7 +6,7 @@ require "conversation_forms/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "conversation_forms"
-  s.version     = ConversationForms::Rails::VERSION
+  s.version     = ConversationForms::VERSION
   s.authors     = ["Sampson Crowley"]
   s.email       = ["sampsonsprojects@gmail.com"]
   s.homepage    = "https://github.com/SampsonCrowley/conversation_forms"
