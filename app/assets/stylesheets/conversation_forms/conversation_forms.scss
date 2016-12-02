@@ -1,0 +1,180 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ *{
+   box-sizing: border-box;
+ }
+
+ .convo-window{
+   display: flex;
+   width: 100%;
+   max-width: 500px;
+   height: 500px;
+   border-radius: 4px;
+   border: 1px solid #ccc;
+   box-shadow: -1px 2px 10px #999;
+   background: #c4d4e9;
+   padding: 20px;
+   flex-flow: column nowrap;
+
+   .convo-chat-history {
+     flex: 1;
+     padding: 10px 0;
+     overflow-y: scroll;
+     overflow-x: hidden;
+     list-style: none;
+     background: none;
+     margin: 0;
+     margin-bottom: 15px;
+     flex-flow: column nowrap;
+     justify-content: flex-end;
+   }
+
+   .input-box {
+     height: 30px;
+     width: 100%;
+     color: #666;
+     font-size: 16px;
+     padding: 4px 15px 4px 30px;
+     border: 1px solid #C0C0BA;
+     font-weight: 400;
+     border-top-right-radius: 10px;
+     border-top-left-radius: 10px;
+     overflow: hidden;
+     resize: none;
+     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+     transition: all 0.4s cubic-bezier(0.565, -0.26, 0.255, 1.41);
+     outline: none;
+   }
+
+   .other .msg {
+       border-top-left-radius: 0px;
+       box-shadow: -1px 2px 0px #c1cbcd;
+   }
+   .other:before {
+       content: "";
+       position: relative;
+       top: 0px;
+       right: 0px;
+       left: 0px;
+       width: 0px;
+       height: 0px;
+       border: 5px solid #efefef;
+       border-left-color: transparent;
+       border-bottom-color: transparent;
+
+   }
+
+   .self {
+       justify-content: flex-end;
+       align-items: flex-end;
+   }
+   .self .msg {
+       border-bottom-right-radius: 0px;
+       box-shadow: 1px 2px 0px #c1cbcd;
+   }
+   .self:after {
+       content: "";
+       position: relative;
+       display: inline-block;
+       float: right;
+       bottom: 0px;
+       right: 0px;
+       width: 0px;
+       height: 0px;
+       border: 5px solid #eef8ff;
+       border-right-color: transparent;
+       border-top-color: transparent;
+       box-shadow: 0px 2px 0px #c1cbcd;
+   }
+
+   .msg {
+       background: #efefef;
+       min-width: 50px;
+       padding: 10px;
+       border-radius: 2px;
+       word-break: break-all;
+   }
+   .msg p {
+       font-size: 16px;
+       margin: 0 0 2px 0;
+       color: #777;
+       transition: all .2s ease;
+   }
+   .convo-chat-history li {
+       padding: 0.5rem;
+       overflow: hidden;
+       display: flex;
+   }
+
+   /* R E S P O N S I V E   C O N F I G U R A T I O N */
+
+   @media screen and (max-width: 750px) {
+       ::-webkit-scrollbar {
+       display: none;
+       }
+       .msg p {
+           font-size: 14px;
+       }
+   }
+   @media screen and (max-width: 550px) {
+       .msg p {
+           max-width: 250px;
+       }
+       .msg img {
+           width: 200px;
+       }
+   }
+ }
+
+
+
+
+
+
+ @-webkit-keyframes pulse {
+   from { opacity: 0; }
+   to { opacity: 0.5; }
+ }
+
+ ::-webkit-scrollbar {
+     min-width: 12px;
+     width: 12px;
+     max-width: 12px;
+     min-height: 12px;
+     height: 12px;
+     max-height: 12px;
+ }
+
+ ::-webkit-scrollbar-thumb {
+     background: rgba(255,255,255,0.2);
+     border: none;
+     border-radius: 100px;
+     border: solid 3px #252C33;
+ }
+
+ ::-webkit-scrollbar-thumb:hover {
+     background: rgba(255,255,255,0.1);
+ }
+
+ ::-webkit-scrollbar-thumb:active {
+     background: rgba(255,255,255,0.1);
+ }
+
+ ::-webkit-scrollbar-button {
+     display: block;
+     height: 26px;
+ }
