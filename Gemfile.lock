@@ -1,8 +1,9 @@
 PATH
   remote: .
   specs:
-    conversation_forms (0.1.0)
+    conversation_forms (0.2.0)
       rails (~> 5.0.0, >= 5.0.0.1)
+      railties
 
 GEM
   remote: https://rubygems.org/
