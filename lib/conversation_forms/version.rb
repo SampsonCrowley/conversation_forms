@@ -1,5 +1,3 @@
 module ConversationForms
-  module Rails
-    VERSION = "0.5.0"
-  end
+  VERSION = "0.5.0"
 end
