@@ -21,6 +21,11 @@ Or install it yourself as:
 $ gem install conversation_forms
 ```
 
+Finally require the js and css:
+```bash
+//= require conversation_forms
+```
+
 ## Contributing
 Contribution directions go here.
 
