@@ -1,4 +1,4 @@
-# Place all the behaviors and hooks related to the matching controller here.
+cd# Place all the behaviors and hooks related to the matching controller here.
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
@@ -15,6 +15,15 @@ $ ->
     doc.append("""
     <div class="convo-window">
       <ol class="convo-chat-history">
+      <li class="other">
+        <div class="msg">
+          <p>Hi! Welcome to conversation forms. I'm Converso, your friendly form-bot.
+            Here, instead of filling out a borring form, we're going to have a pleasant
+            conversation. When I ask a question, type your answer into the input box below.
+          </p>
+          <p> When your answer is ready, press the "NEXT" button. Or, you can simply press the ENTER (or RETURN) key on your keyboard</p>
+        </div>
+      </li>
       </ol>
       <input id="input-box" class="input-box" placeholder="Type your answer here ...">
       <button id="convo-form-enter">Next</button>
