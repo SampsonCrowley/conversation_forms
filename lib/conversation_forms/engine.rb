@@ -2,7 +2,7 @@ module ConversationForms
   module Rails
     class Engine < ::Rails::Engine
       initializer 'conversation_forms.assets.precompile' do |app|
-        %w(stylesheets javascripts).each do |sub|
+        %w(javascripts).each do |sub|
           app.config.assets.paths << root.join('assets', sub).to_s
         end
 
