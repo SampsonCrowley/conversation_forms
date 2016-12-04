@@ -61,15 +61,20 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	if (document.body.contains(document.getElementById("convo-form"))) {
-	  var mainForm = document.getElementById("convo-form");
-	  mainForm.style.display = "none";
-	  var cfw = document.createElement('div');
-	  cfw.id = 'convo-form-window';
-	  document.body.appendChild(cfw);
+	var tid = setInterval(function () {
+	  if (document.readyState !== 'complete') return;
+	  clearInterval(tid);
+	  // do your work
+	  if (document.body.contains(document.getElementById("convo-form"))) {
+	    var mainForm = document.getElementById("convo-form");
+	    mainForm.style.display = "none";
+	    var cfw = document.createElement('div');
+	    cfw.id = 'convo-form-window';
+	    document.body.appendChild(cfw);
 	
-	  (0, _reactDom.render)(_react2.default.createElement(_app2.default, null), document.getElementById('convo-form-window'));
-	}
+	    (0, _reactDom.render)(_react2.default.createElement(_app2.default, null), document.getElementById('convo-form-window'));
+	  }
+	}, 100);
 
 /***/ },
 /* 1 */
