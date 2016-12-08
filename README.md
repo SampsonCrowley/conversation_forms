@@ -37,6 +37,11 @@ conversation forms will automatically detect your form's method and action
 <form id="my-form-element" cf-form-element ...
 ```
 
+with form_for add "cf-form-elemt" => true:
+```ruby
+<%= form_for @user, html: { "cf-form-element" => true } do |f| %>
+``
+
 That's It!
 
 
